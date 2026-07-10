@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#F5F3EE; font-family:'Archivo',system-ui,sans-serif; color:#0B2B25; }
+    a { color:#0E7C68; text-decoration:none; }
+    a:hover { color:#0B5F51; }
+    ::selection { background:#3FD68F; color:#0B2B25; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:0 20px 56px;">
+
+  <!-- Header -->
+  <header data-screen-label="Header" style="width:100%; max-width:720px; display:flex; flex-direction:column; align-items:center; text-align:center; padding:52px 0 36px; gap:14px;">
+    <img src="assets/asterisco.png" alt="" style="width:44px; height:44px; object-fit:contain;">
+    <h1 style="margin:0; font-size:34px; font-weight:800; letter-spacing:-0.02em; color:#0B2B25;">Sabina Deweik</h1>
+    <p style="margin:0; font-size:14px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C68;">Futurista &nbsp;·&nbsp; Inteligência de Tendências</p>
+    <p style="margin:2px 0 0; font-size:16px; line-height:1.5; color:#3E5A53; max-width:440px;">O futuro não se prevê — se constrói. Escolha por onde começar:</p>
+  </header>
+
+  <main style="width:100%; max-width:720px; display:flex; flex-direction:column; gap:20px;">
+
+    <!-- 1 · Palestras & Media Kit -->
+    <section data-screen-label="Palestras e Media Kit" style="background:#0E4D42; border-radius:24px; overflow:hidden; display:flex; flex-wrap:wrap; align-items:stretch;">
+      <div style="flex:1 1 320px; padding:36px 32px; display:flex; flex-direction:column; gap:14px; justify-content:center;">
+        <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#3FD68F;">Palestras · Treinamentos · Eventos</span>
+        <h2 style="margin:0; font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-0.02em; color:#FFFFFF;">Vamos falar sobre futuros no seu evento?</h2>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#BFE6D8;">Palestras e treinamentos sobre tendências, comportamento e os futuros dos negócios — para empresas e eventos em todo o Brasil.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;">
+          <a href="{{ linkMediaKit }}" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#3FD68F; color:#0B2B25; font-weight:700; font-size:15px; padding:13px 22px; border-radius:999px;" style-hover="background:#FFFFFF; color:#0B2B25;">Baixar Media Kit (PDF) ↓</a>
+          <a href="{{ linkWhats }}" target="_blank" style="display:inline-flex; align-items:center; gap:8px; border:1.5px solid rgba(255,255,255,0.4); color:#FFFFFF; font-weight:600; font-size:15px; padding:13px 22px; border-radius:999px;" style-hover="border-color:#3FD68F; color:#3FD68F;">Pedir orçamento</a>
+        </div>
+      </div>
+      <div style="flex:1 1 240px; min-height:280px; position:relative;">
+        <img src="assets/sabina.avif" alt="Sabina Deweik palestrando" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center;">
+      </div>
+    </section>
+
+    <!-- 2 · Futuro Com Sabina -->
+    <section data-screen-label="Futuro Com Sabina" style="background:#3FD68F; border-radius:24px; padding:32px; display:flex; flex-wrap:wrap; align-items:center; gap:20px;">
+      <div style="flex:1 1 320px; display:flex; flex-direction:column; gap:10px;">
+        <span style="align-self:flex-start; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0E4D42; background:rgba(255,255,255,0.55); padding:5px 12px; border-radius:999px;">Gratuito</span>
+        <h2 style="margin:0; font-size:24px; font-weight:800; letter-spacing:-0.02em; color:#0B2B25;">Futuro Com Sabina</h2>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#0E4D42;">Comunidade gratuita + newsletter. Tendências, sinais e provocações sobre os futuros — direto no seu e-mail.</p>
+      </div>
+      <a href="https://melevaparaofuturo.substack.com/" target="_blank" style="flex:0 0 auto; background:#0B2B25; color:#FFFFFF; font-weight:700; font-size:15px; padding:14px 24px; border-radius:999px;" style-hover="background:#0E4D42; color:#FFFFFF;">Entrar na comunidade →</a>
+    </section>
+
+    <!-- 3 · Mapa das Convergências -->
+    <section data-screen-label="Mapa das Convergencias" style="background:#FFFFFF; border:1.5px solid #E4E0D6; border-radius:24px; padding:32px; display:flex; flex-wrap:wrap; align-items:center; gap:20px;">
+      <div style="flex:1 1 320px; display:flex; flex-direction:column; gap:10px;">
+        <span style="align-self:flex-start; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C68; background:#E7F6EF; padding:5px 12px; border-radius:999px;">Curso gravado</span>
+        <h2 style="margin:0; font-size:24px; font-weight:800; letter-spacing:-0.02em; color:#0B2B25;">O Mapa das Convergências</h2>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3E5A53;">As forças que estão redesenhando os próximos anos — e como se preparar. Assista quando e onde quiser.</p>
+      </div>
+      <a href="https://visao2026.sabinadeweik.com.br/" target="_blank" style="flex:0 0 auto; background:#0E7C68; color:#FFFFFF; font-weight:700; font-size:15px; padding:14px 24px; border-radius:999px;" style-hover="background:#0B2B25; color:#FFFFFF;">Conhecer o curso →</a>
+    </section>
+
+    <!-- 4 · Coluna VejaSP + Na mídia -->
+    <section data-screen-label="Na midia" style="background:#FFFFFF; border:1.5px solid #E4E0D6; border-radius:24px; padding:32px; display:flex; flex-direction:column; gap:16px;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <span style="align-self:flex-start; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0E7C68; background:#E7F6EF; padding:5px 12px; border-radius:999px;">Na mídia</span>
+        <h2 style="margin:0; font-size:24px; font-weight:800; letter-spacing:-0.02em; color:#0B2B25;">Coluna, entrevistas e podcasts</h2>
+        <p style="margin:0; font-size:15px; line-height:1.55; color:#3E5A53;">A coluna na VejaSP e as participações da Sabina em entrevistas, podcasts e artigos.</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:12px;">
+        <a href="{{ linkVejaSP }}" target="_blank" style="flex:1 1 200px; display:flex; align-items:center; justify-content:space-between; gap:10px; border:1.5px solid #E4E0D6; border-radius:16px; padding:16px 20px; font-weight:700; font-size:15px; color:#0B2B25;" style-hover="border-color:#0E7C68; background:#E7F6EF; color:#0B2B25;"><span>Coluna VejaSP</span><span style="color:#0E7C68;">→</span></a>
+        <a href="https://www.sabinadeweik.com/" target="_blank" style="flex:1 1 200px; display:flex; align-items:center; justify-content:space-between; gap:10px; border:1.5px solid #E4E0D6; border-radius:16px; padding:16px 20px; font-weight:700; font-size:15px; color:#0B2B25;" style-hover="border-color:#0E7C68; background:#E7F6EF; color:#0B2B25;"><span>Todas as participações</span><span style="color:#0E7C68;">→</span></a>
+      </div>
+    </section>
+
+    <!-- 5 · Contatos -->
+    <section data-screen-label="Contatos" style="background:#0B2B25; border-radius:24px; padding:32px; display:flex; flex-direction:column; gap:18px;">
+      <h2 style="margin:0; font-size:20px; font-weight:800; letter-spacing:-0.01em; color:#FFFFFF; text-align:center;">Fale com a Sabina</h2>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
+        <a href="{{ linkWhats }}" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#FFFFFF; font-weight:600; font-size:14px; padding:12px 18px; border-radius:999px;" style-hover="background:#3FD68F; border-color:#3FD68F; color:#0B2B25;">WhatsApp</a>
+        <a href="mailto:sabina@sabinadeweik.com.br" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#FFFFFF; font-weight:600; font-size:14px; padding:12px 18px; border-radius:999px;" style-hover="background:#3FD68F; border-color:#3FD68F; color:#0B2B25;">E-mail</a>
+        <a href="https://www.instagram.com/sabina.deweik/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#FFFFFF; font-weight:600; font-size:14px; padding:12px 18px; border-radius:999px;" style-hover="background:#3FD68F; border-color:#3FD68F; color:#0B2B25;">Instagram</a>
+        <a href="https://www.linkedin.com/in/sabina-deweik-4662777/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#FFFFFF; font-weight:600; font-size:14px; padding:12px 18px; border-radius:999px;" style-hover="background:#3FD68F; border-color:#3FD68F; color:#0B2B25;">LinkedIn</a>
+        <a href="https://www.sabinadeweik.com/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18); color:#FFFFFF; font-weight:600; font-size:14px; padding:12px 18px; border-radius:999px;" style-hover="background:#3FD68F; border-color:#3FD68F; color:#0B2B25;">Site</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="margin-top:36px; display:flex; align-items:center; gap:10px; color:#8A9A93; font-size:13px;">
+    <img src="assets/asterisco.png" alt="" style="width:16px; height:16px; object-fit:contain; opacity:0.7;">
+    <span>© Sabina Deweik</span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;linkMediaKit&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;#&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot; },
+  &quot;linkVejaSP&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.sabinadeweik.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot; },
+  &quot;msgWhats&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Olá, Sabina! Gostaria de um orçamento de palestra/treinamento.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Links&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      linkMediaKit: this.props.linkMediaKit ?? "#",
+      linkVejaSP: this.props.linkVejaSP ?? "https://www.sabinadeweik.com/",
+      linkWhats: "https://wa.me/5511991778022?text=" + encodeURIComponent(this.props.msgWhats ?? "Olá, Sabina! Gostaria de um orçamento de palestra/treinamento."),
+    };
+  }
+}
+</script>
+</body>
+</html>
