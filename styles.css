@@ -1,0 +1,285 @@
+/* ==========================================================================
+   Sabina Deweik — Linktree / página de banners
+   Brand: verde profundo #0B2B25 · verde #0E7C68 · verde-menta #3FD68F
+   Fundo areia #F5F3EE · tipografia Archivo
+   ========================================================================== */
+
+:root {
+  --ink:        #0B2B25; /* verde quase preto — texto / fundo escuro */
+  --ink-soft:   #3E5A53; /* texto secundário sobre claro          */
+  --green:      #0E7C68; /* verde marca — links                    */
+  --green-dk:   #0B5F51; /* verde marca hover                      */
+  --green-deep: #0E4D42; /* verde do card hero                     */
+  --mint:       #3FD68F; /* verde-menta — destaque                 */
+  --sand:       #F5F3EE; /* fundo areia                            */
+  --line:       #E4E0D6; /* borda dos cards claros                 */
+  --mint-tint:  #E7F6EF; /* fundo das tags claras                  */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--sand);
+  font-family: 'Archivo', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--green); text-decoration: none; }
+a:hover { color: var(--green-dk); }
+
+::selection { background: var(--mint); color: var(--ink); }
+
+img { max-width: 100%; }
+
+/* ---- Shell -------------------------------------------------------------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 56px;
+}
+
+.wrap { width: 100%; max-width: 720px; }
+
+/* ---- Header ------------------------------------------------------------- */
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 52px 0 36px;
+  gap: 14px;
+}
+
+.site-header__mark { width: 44px; height: 44px; object-fit: contain; }
+
+.site-header__name {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.site-header__role {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.site-header__lede {
+  margin: 2px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 440px;
+}
+
+/* ---- Cards stack -------------------------------------------------------- */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Shared bits */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tag {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.btn--mint   { background: var(--mint);      color: var(--ink);  padding: 13px 22px; }
+.btn--mint:hover   { background: #FFFFFF;     color: var(--ink); }
+
+.btn--ghost  { border: 1.5px solid rgba(255,255,255,0.4); color: #FFFFFF; font-weight: 600; padding: 13px 22px; }
+.btn--ghost:hover  { border-color: var(--mint); color: var(--mint); }
+
+.btn--ink    { background: var(--ink);       color: #FFFFFF; }
+.btn--ink:hover    { background: var(--green-deep); color: #FFFFFF; }
+
+.btn--green  { background: var(--green);     color: #FFFFFF; }
+.btn--green:hover  { background: var(--ink); color: #FFFFFF; }
+
+/* ---- 1 · Palestras & Media Kit (hero) ----------------------------------- */
+
+.hero {
+  background: var(--green-deep);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.hero__body {
+  flex: 1 1 320px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.hero__eyebrow { color: var(--mint); }
+.hero .card__title { font-size: 30px; line-height: 1.15; color: #FFFFFF; }
+.hero .card__text  { color: #BFE6D8; }
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+.hero__media { flex: 1 1 240px; min-height: 280px; position: relative; }
+.hero__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ---- 2 · Futuro Com Sabina ---------------------------------------------- */
+
+.card-row {
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-row__body { flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px; }
+.card-row .btn { flex: 0 0 auto; }
+
+.futuro { background: var(--mint); }
+.futuro .tag        { color: var(--green-deep); background: rgba(255,255,255,0.55); }
+.futuro .card__title { font-size: 24px; color: var(--ink); }
+.futuro .card__text  { color: var(--green-deep); }
+
+/* ---- 3 · Mapa das Convergências + 4 · Na mídia (cards claros) ----------- */
+
+.card-light {
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.card-light .tag         { color: var(--green); background: var(--mint-tint); }
+.card-light .card__title  { font-size: 24px; color: var(--ink); }
+.card-light .card__text   { color: var(--ink-soft); }
+
+.midia { display: flex; flex-direction: column; gap: 16px; }
+.midia__head { display: flex; flex-direction: column; gap: 10px; }
+.midia__links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.link-card {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color .18s ease, background-color .18s ease;
+}
+.link-card:hover { border-color: var(--green); background: var(--mint-tint); color: var(--ink); }
+.link-card__arrow { color: var(--green); }
+
+/* ---- 5 · Contatos ------------------------------------------------------- */
+
+.contatos {
+  background: var(--ink);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contatos__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.contatos__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+.pill:hover { background: var(--mint); border-color: var(--mint); color: var(--ink); }
+
+/* ---- Footer ------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8A9A93;
+  font-size: 13px;
+}
+.site-footer img { width: 16px; height: 16px; object-fit: contain; opacity: 0.7; }
